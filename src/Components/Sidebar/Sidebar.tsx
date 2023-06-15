@@ -5,7 +5,7 @@ export default function Sidebar() {
   return (
     <Grid item md={1}
         sx={{
-            backgroundColor: "primary.main",
+            backgroundColor: "background.paper",
             height: "100vh",
             position: "fixed",
             left: 0,

@@ -9,7 +9,7 @@ export default function TaskArea() {
       item
       md={11}
       sx={{
-        backgroundColor: "primary.main",
+        backgroundColor: "background.paper",
         height: "100vh",
         position: "fixed",
         right: 0,
