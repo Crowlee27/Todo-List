@@ -12,6 +12,7 @@ export default function AvatarButton({ handleClickOpen }) {
             backgroundColor: "primary.dark",
             marginBottom: "1px",
             marginTop: "30px",
+            color: "text.primary",
           }}
         >
           C
