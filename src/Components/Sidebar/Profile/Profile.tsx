@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from "react";
 import { Box } from "@mui/material";
-import AvatarButton from './ProfileAvatar';
-import ProfileDialog from './ProfileDialog';
+import AvatarButton from "./ProfileAvatar";
+import ProfileDialog from "./ProfileDialog";
 
 export default function Profile() {
   const [open, setOpen] = useState(false);
-  
-    
 
   const handleClickOpen = () => {
     setOpen(true);
