@@ -1,4 +1,3 @@
-import React from "react";
 import { Avatar, Button, Typography, Stack } from "@mui/material";
 
 export default function AvatarButton({ handleClickOpen }) {
