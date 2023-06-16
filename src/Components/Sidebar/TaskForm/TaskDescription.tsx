@@ -1,11 +1,11 @@
 import { TextField } from "@mui/material";
 
-export default function TaskDescription() {
+export default function TaskDescription(props: ITextField) {
+ 
+
   return (
     <TextField
-      id="Description"
-      label="Description"
-      type="string"
+      {...props}
       fullWidth
       variant="standard"
       multiline
