@@ -1,13 +1,14 @@
 import { TextField } from "@mui/material";
 
-export default function TaskTitle() {
-    return (
-        <TextField
-        autoFocus
-          id="Title"
-          label="Task Title"
-          type="string"
-          fullWidth
-          variant="standard"/>
-    )
+export default function TaskTitle(props: ITextField) {
+  
+
+  return (
+    <TextField {...props}
+      autoFocus
+      type="string"
+      fullWidth
+      variant="standard"
+    />
+  );
 }
