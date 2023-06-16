@@ -1,17 +1,18 @@
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
-import { ITaskDate } from "../TaskFormInterfaces/ITaskDate";
+
 
 export default function TaskDate(props: ITaskDate)  {
-const {
-    onChange = (date) => console.log(date),
-} = props;
+// const {
+//     onChange = (date) => console.log(date),
+// } = props;
 
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <DateTimePicker label="Due Date" 
-        onChange={onChange}
+      <DateTimePicker label="Due Date"
+       {...props}
+        // onChange={onChange}
       />
     </LocalizationProvider>
   );
