@@ -1,11 +1,9 @@
 import { useState } from "react";
 import ThemeAppBar from "./Components/Sidebar/AppBar/AppBar";
-import ToDoComponent from "./features/todo/ToDoComponent";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
-import { Box } from "@mui/material";
 import Dashboard from "./Dashboard/Dashboard";
-import {CssBaseline} from "@mui/material";
+import { CssBaseline } from "@mui/material";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -18,13 +16,11 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline/>
+      <CssBaseline />
       <Paper style={{ height: "100vh", padding: 10, margin: 0 }}>
-        
-          <ThemeAppBar check={darkMode} change={() => setDarkMode(!darkMode)} />
+        <ThemeAppBar check={darkMode} change={() => setDarkMode(!darkMode)} />
 
-          <Dashboard/>
-        
+        <Dashboard />
       </Paper>
     </ThemeProvider>
   );
