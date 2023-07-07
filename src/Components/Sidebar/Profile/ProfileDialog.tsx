@@ -7,12 +7,13 @@ import {
   Button,
 } from "@mui/material";
 import TaskForm from "../TaskForm/TaskForm";
-
 import { DialogProps } from "@mui/material/Dialog";
+
 
 export default function ProfileDialog({ open, handleClose }) {
   const [fullWidth] = useState(true);
   const [maxWidth] = useState<DialogProps["maxWidth"]>("lg");
+
 
   return (
     <Dialog

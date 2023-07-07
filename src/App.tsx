@@ -4,6 +4,12 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 import Dashboard from "./Dashboard/Dashboard";
 import { CssBaseline } from "@mui/material";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+
+
+// create a client
+const queryClient = new QueryClient();
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -15,6 +21,7 @@ function App() {
   });
 
   return (
+    <QueryClientProvider client={queryClient}>
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Paper style={{ height: "100vh", padding: 10, margin: 0 }}>
@@ -22,7 +29,9 @@ function App() {
 
         <Dashboard />
       </Paper>
-    </ThemeProvider>
+      </ThemeProvider>
+      <ReactQueryDevtools initialIsOpen={false} />
+      </QueryClientProvider>
   );
 }
 

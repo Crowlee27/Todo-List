@@ -12,7 +12,8 @@ declare global {
     id: string;
     name: string;
     label: string;
-  }
+    onChange? = (e) => console.log(e)
+}
 
   interface ISelectItems {
     value: string;
@@ -54,5 +55,13 @@ declare global {
     id?: string;
     priority?: string;
     status?: string;
+  }
+
+  interface CreateTask {
+    title: string;
+    description: string;
+    date: string;
+    priority: string;     
+    status: string;
   }
 }
